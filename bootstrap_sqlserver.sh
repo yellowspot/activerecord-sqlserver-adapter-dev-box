@@ -37,7 +37,7 @@ sleep 5
 CREATE DATABASE [activerecord_unittest];
 CREATE DATABASE [activerecord_unittest2];
 GO
-CREATE LOGIN [rails] WITH PASSWORD = '', CHECK_POLICY = OFF, DEFAULT_DATABASE = [activerecord_unittest];
+CREATE LOGIN [rails] WITH PASSWORD = 'password', CHECK_POLICY = OFF, DEFAULT_DATABASE = [activerecord_unittest];
 GO
 USE [activerecord_unittest];
 CREATE USER [rails] FOR LOGIN [rails];
@@ -59,11 +59,11 @@ chown -R vagrant:vagrant /home/vagrant/.rbenv
 echo 'export PATH="/home/vagrant/.rbenv/bin:$PATH"' >> /home/vagrant/.bashrc
 echo 'eval "$(rbenv init -)"' >> /home/vagrant/.bashrc
 
-runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv install 2.7.7'
-runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv install 3.0.5'
-runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv install 3.1.3'
-runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv install 3.2.1'
-runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv global 3.2.1'
+runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv install 2.7.8'
+runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv install 3.0.6'
+runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv install 3.1.4'
+runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv install 3.2.2'
+runuser -l vagrant -c '/home/vagrant/.rbenv/bin/rbenv global 3.2.2'
 
 # Install dot
 install graphviz graphviz
